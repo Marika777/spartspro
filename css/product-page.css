@@ -1,0 +1,64 @@
+.page__actions{
+    display: flex;
+    padding-top: 80px;
+}
+.product-details__wrapper {
+    display: flex;
+    gap: 50px;
+}
+.product-details__image {
+    flex: 1;
+    background: var(--bg_tertiary);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+.product-details__image img {
+    max-width: 100%;
+    height: auto;
+}
+.product-details__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;;
+    flex: 1;
+}
+.product-details__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.product-details__status { 
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    transition: all 0.3s ease-in-out;
+    height: 26px;
+}
+.product-details__status::before {
+    content: '';
+    display: block;
+    width: 14px;
+    min-width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: currentColor;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 6px;
+    position: relative;
+}
+.product-details__status::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='6' viewBox='0 0 7 6' fill='none'%3E%3Cpath d='M0.5 1.83333L2.71053 4.5L6.5 0.5' stroke='%23ffffff' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.product-details__status--in-stock {
+    color: var(--bg_badge);
+    font-weight: bold;
+}
+.product-details__status--on-order {
+    color: var(--bg_accent);
+    font-weight: bold;
+}
